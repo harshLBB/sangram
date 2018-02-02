@@ -1,0 +1,643 @@
+{% load staticfiles %}
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'sngm/clock/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'sngm/css/mainnew.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'sngm/clock/css/demo.css' %}">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><link type="text/css" rel="stylesheet" href="{% static 'sngm/css/css' %}"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style { font: 400 11px Roboto, Arial, sans-serif;text-decoration: none; }.gm-style img { max-width: none; }</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+      <!--<base href="/">--><base href=".">
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="{% static 'sngm/css/select2.min.css' %}" rel="stylesheet">
+      <!-- <link rel="stylesheet" '/static/bower_components/select2-bootstrap-css/select2-bootstrap.min.css'> -->
+      <link rel="stylesheet" href="{% static 'sngm/css/font-awesome.css' %}">
+      <!-- <link rel="stylesheet" href='/static/bower_components/AngularJS-Toaster/toaster.min.css' /> -->
+      <!-- Styles -->
+      <link rel="stylesheet" href="{% static 'sngm/css/main.css' %}">
+      <link href="{% static 'sngm/css/css(1)' %}" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'sngm/css/loading-bar.min.css' %}">
+      <style>
+
+
+	  <style>
+
+</style>
+      <!-- End of Styles -->
+      <script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+		</script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/common.js' %}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/map.js' %}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/util.js' %}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/marker.js' %}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/onion.js' %}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/stats.js' %}"></script>
+    <script type="text/javascript" charset="UTF-8" src="{% static 'sngm/js/controls.js' %}"></script>
+  </head>
+    <body  class="ng-scope">
+<!-- ngView: --><div ng-view="" class="ng-scope"><div class="section1 ng-scope">
+  <div class="">
+    <div class="container-fluid">
+      <div class="col-md-7">
+        <div class="logo">
+          <img src="{% static 'sngm/images/logo.png' %}" alt="Sangram 2018" width="95%" style="margin-left: -20px;">
+        </div>
+      </div>
+      <div class=" col-md-5 topnav">
+        <ul>
+          <li><a href="#about" onclick="redirect()">About Us</a></li>
+<!--          <li><a href="#marathon">Marathon</a></li>-->
+          <li><a href="#events" >Events</a></li>
+        <script>
+        function redirect(){
+        $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+}
+</script>
+          <li><a href="/sponsors" target="_BLANK">Sponsors</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="id01" class="modal">
+  	<form class="modal-content animate" style="text-align:center;">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	    </div>
+
+
+
+	      <button ><a target="_blank" style="color:white;text-decoration:none;" href="https://docs.google.com/forms/d/e/1FAIpQLScmwTJoCdYPVq3r8Pr0XJ0lXwnzmhvcmOnIBJkEWgr0SeVMvQ/viewform?c=0&w=1 ">IIT Roorkee Residents</a> </button>
+	      <button ><a target="_blank" style="color:white;text-decoration:none;" href="https://goeventz.com/event/sangram-roorkee-half-marathon-2017/38011">Others</a> </button>
+
+
+	  </form>
+	</div>
+  <div style="padding-bottom:9%;" class=" starline">
+    <div class="container">
+      <div class="col-md-12 text-center">
+        <h3>SANGRAM' 18</h3>
+        <h5>Annual Sports Fest IIT ROORKEE</h5>
+        <h4>29th MARCH - 1st APRIL</h4>
+      </div>
+    </div>
+  </div>
+<!--
+  <div class="register">
+<div id="show_login" >
+    <a class="register-button" data-toggle="modal" data-target="#register">Register Your  College</a></div>
+  </div>
+-->
+
+<!--
+  <div class="NoPopUp" id="LoginNPU" style="visibility:hidden" >
+  <center>
+      <h2 id="LoginTitle">REGISTER COLLEGE</h2>
+    <form action="{% url 'sangram:create_user' %}" method="post">
+      {% csrf_token %}
+      <div class="formContainer">
+
+          <br>
+          <label class="formElementLabel">CONTINGENT LEADER NAME</label><br>
+          <input type="text" name="name" placeholder="Name" class="formElement" required>
+          <br>
+          <label class="formElementLabel">EMAIL ID</label><br>
+          <input type="text" name="email" placeholder="Email id" class="formElement" required>
+          <br>
+          <label class="formElementLabel">PHONE NUMBER</label><br>
+          <input type="text" name="number" placeholder= "Phone Number" class="formElement"	required>
+          <br>
+          <label class="formElementLabel">COLLEGE </label><br>
+          <input type="text" name="college" placeholder="Full College name" class="formElement" required>
+          <br>
+          <input type="submit" name="submit" class="custom-button" id="LoginButton" >
+          <br>
+
+      </div>
+    </form>
+  </center>
+  </div>
+-->
+  <div class="logos">
+    <a href="http://www.iitr.ac.in/" target="_BLANK"><img src="{% static 'sngm/images/iitr.png' %}" alt="" width="50%"></a><a href="http://www.iitrsports.com/" target="_BLANK"><img src="{% static 'sngm/images/isc.png' %}" width="50%" style="margin-top: -25px;"></a>
+  </div>
+</div>
+<div class="countdown container" style="padding:80px 0">
+    <div class="clock row">
+        <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-days" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-days type-time">DAYS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-hours" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-hours type-time">HOURS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-minutes" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-minutes type-time">MINUTES</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-seconds" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-seconds type-time">SECONDS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+    </div><!-- /.clock -->
+</div><!-- /.countdown-wrapper -->
+<div class="section2 ng-scope" id="about">
+  <div class="">
+    <div class="container">
+      <div class="col-md-12">
+        <div class="heading text-center" style="width: 100%">
+          <img src="{% static 'sngm/images/about-head.png' %}" width="40%">
+        </div>
+        <p class="about-text">Sangram boasts of being a one of a kind festival hosted by IIT Roorkee and is a three day sports extravaganza. It brings out the sporting spirit of the brilliant minds of the country and provides an ideal platform for all the sports enthusiasts to compete with each other.<br>Our IIT Roorkee teams, along with the alumni teams participate in each sport to exibit their sports skill. Sangram is devoted in creating a customized and unforgettable experience for each and every visitor, simultaneously providing unique oppurtunities to the youth for showcasing their talents in front of extremely large and enthusiastic audience and top notch judges with a behemoth footfall of more than 1500 students, comprising several IITs and NITs. An assortment of intriguing events held in venues across our campus, are something to cater to all tastes. Plethoras of events are hosted, accompanied by informal events like sports quiz , marathon becoming the abode of this ambrosial combination.<br>Sangram’18 promises to be an exhilarating experience from beginning to end.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section3 ng-scope" id="events">
+  <div class="">
+    <div class="container">
+      <div class="heading text-center" style="width: 100%">
+        <img src="{% static 'sngm/images/events-head.png' %}" width="30%">
+      </div>
+    </div>
+  </div>
+  <div class="" style="margin-top: 40px;">
+    <div class="container">
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="athletics/"><img class="sport-icon" src="{% static 'sngm/images/athletics.svg' %}" alt="Athletics" width="100px"></a><br>
+        <span>Athletics</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="badminton/"><img class="sport-icon" src="{% static 'sngm/images/badminton.svg' %}" alt="Badminton" width="100px"></a><br>
+        <span>Badminton</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="basketball/"><img class="sport-icon" src="{% static 'sngm/images/basketball.svg' %}" alt="basketball" width="100px"></a><br>
+        <span>Basketball</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="chess/"><img class="sport-icon" src="{% static 'sngm/images/chess.svg' %}" alt="chess" width="100px"></a><br>
+        <span>Chess<span>
+      </span></span></div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="cricket/"><img class="sport-icon" src="{% static 'sngm/images/cricket.svg' %}" alt="cricket" width="100px"></a><br>
+        <span>Cricket</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="football/"><img class="sport-icon" src="{% static 'sngm/images/football.svg' %}" alt="football" width="100px"></a><br>
+        <span>Football</span>
+      </div>
+    </div>
+  </div>
+  <div class="" style="margin-top: 40px;">
+      </div>
+    </div>
+  </div>
+  <div class="" style="margin-top: 40px;">
+    <div class="container">
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="hockey/"><img class="sport-icon" src="{% static 'sngm/images/hockey.svg' %}" alt="Athletics" width="100px"></a><br>
+        <span>Hockey</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="kabaddi"><img class="sport-icon" src="{% static 'sngm/images/kabaddi.svg' %}" alt="basketball" width="100px"></a><br>
+        <span>Kabaddi</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="khokho/"><img class="sport-icon" src="{% static 'sngm/images/khokho.svg' %}" alt="basketball" width="100px"></a><br>
+        <span>Khokho</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="snooker/"><img class="sport-icon" src="{% static 'sngm/images/snooker.svg' %}" alt="Badminton" width="100px"></a><br>
+        <span>Snooker</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="squash/"><img class="sport-icon" src="{% static 'sngm/images/squash.svg' %}" alt="basketball" width="100px"></a><br>
+        <span>Squash</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="tabletennis/"><img class="sport-icon" src="{% static 'sngm/images/table tennis.svg' %}" alt="chess" width="100px"></a><br>
+        <span>Table Tennis</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="" style="margin-top: 40px;">
+    <div class="container">
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href=""></a><br>
+        <span></span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="taekwondo/"><img class="sport-icon" src="{% static 'sngm/images/taekwondo.svg' %}" alt="cricket" width="100px"></a><br>
+        <span>Taekwondo</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="tennis/"><img class="sport-icon" src="{% static 'sngm/images/tennis.svg' %}" alt="football" width="100px"></a><br>
+        <span>Tennis</span>
+      </div>
+      <div class="col-md-2 col-sm-2 col-sm-offset-4 col-md-offset-0 text-center">
+        <a href="volleyball/"><img class="sport-icon" src="{% static 'sngm/images/volleyball.svg' %}" alt="basketball" width="100px"></a><br>
+        <span>Volleyball</span>
+      </div>
+      <div class="col-md-2 col-sm-2  text-center">
+        <a href="weightlifting/"><img class="sport-icon" src="{% static 'sngm/images/weightlifting.svg' %}" alt="chess" width="100px"></a><br>
+        <span>Weightlifting</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--
+<div id="marathon" class="section4 ng-scope">
+  <div class="">
+    <div class="container">
+      <div class="heading text-center" style="width: 100%">
+        <img src="{% static 'sngm/images/marathon-head.png' %}" width="30%">
+      </div>
+      <div class="heading text-center" style="width: 100%; margin-top: 30px;">
+        <img src="{% static 'sngm/images/marathon-icons.png' %}" width="40%">
+      </div>
+      <p class="about-text text-center" style="margin-top: -40px;">Marathons! The pride of any runner! Sangram 2017, the annual sports festival of IIT Roorkee is organising a half-marathon on 5th March 2017 outside the IIT campus! Get ready for a first-of-its-kind half-marathon in the heritage city of Roorkee, exploring the history that marks India’s first ever aqueduct, India’s first ever steam engine, the Ganga canal, headquarters of Bengal Engineer Group and of course, the oldest technical institute of India- Indian Institute of Technology Roorkee, the then Thomason College of Civil Engineering. Experience the thrill of running in a marathon with your own chest number and a certificate after the completion of the marathon. It is a feeling lasting a lifetime that you surely don't wanna miss! Run amidst the cheering crowd of Roorkee city past the mosque in Piran Kaliyar, St. John's church and Saraswati temple in the campus premises, tasting the best that the 'Engineering town of India' has to offer!
+If you want to run, run a mile. If you want to experience a different life, run a marathon- Emil Zatopek.</p>
+      <div class="heading text-center" style="width: 100%; margin-top: -40px;">
+        <img src="{% static 'sngm/images/marathon.png' %}" width="30%">
+      </div>
+      <div class="heading text-center" style="margin: 0 auto;">
+        <a  href='https://goeventz.com/event/sangram-roorkee-half-marathon-2017/38011' style="cursor:pointer;" class="marathon-register" target="_BLANK">REGISTER</a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+    
+    <div class="section5 ng-scope">
+  <div class="">
+    <div class="container">
+      <div class="heading text-center" style="width: 100%">
+        <img src="{% static 'sngm/images/team-head.png' %}" width="30%">
+      </div>
+      <div class="container" style="width:73%;">
+      <div class="col-md-6 member text-center">
+        <span class="title">Chief Sports Adviser</span><br>
+        <img src="{% static 'sngm/images/Kansal sir.png' %}" alt="Sumit Kumar Yadav" width="90%"><br>
+        <span class="title">Dr. M.L.Kansal</span>
+      </div>
+      <div class="col-md-6 member text-center">
+        <span class="title">Faculty Incharge</span><br>
+        <img src="{% static 'sngm/images/avli maam.png' %}" alt="Aditya Patkar" width="69%"><br>
+        <span class="title">Dr. Avlokita Agrawal</span>
+      </div>
+    </div>
+      <div class="col-md-4 col-md-offset-4 member text-center">
+        <span class="title">Convener</span><br>
+        <a target="_blank" href="https://www.facebook.com/umang.parikh.1238"><img src="{% static 'sngm/images/umang.png' %}" alt="Umang Parikh" width="90%"></a><br>
+        <span class="title">Umang Parikh</span><br>
+        <span class="title">+91-7409966687</span>
+      </div>
+      <div class="col-md-4 member text-center" style="height: 350px;">
+
+      </div>
+      <div class="">
+        <div class="container" style="width:73%;">
+          <div class="col-md-6 member text-center">
+
+                    <span class="title">Co Convener</span><br>
+                    <a target="_blank" href="https://www.facebook.com/Pavitteg26bir"><img src="{% static 'sngm/images/pavit.png' %}" alt="Pavit Teg Bir Singh" width="90%"></a><br>
+                    <span class="title">Pavit Teg Bir Singh</span><br>
+                    <span class="title">+91-9779582050</span>
+         </div>
+          <div class="col-md-6 member text-center">
+
+
+            <span class="title">Co Convener</span><br>
+            <a target="_blank" href="https://www.facebook.com/sachin.nehru"><img src="{% static 'sngm/images/sachin.png' %}" alt="Sachin Nehru" width="90%"></a><br>
+            <span class="title">Sachin Nehru</span><br>
+            <span class="title">+91-8791715022</span>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4 member text-center">
+
+        <span class="title">Organising Secretary</span><br>
+        <a target="_blank" href="https://www.facebook.com/sumit.1828"><img src="{% static 'sngm/images/sumit.png' %}" alt="Sumit Kumar Yadav" width="90%"></a><br>
+        <span class="title">Sumit Kumar Yadav</span><br>
+        <span class="title">+91-8006478565</span>
+      </div>
+      <div class="col-md-4 member text-center">
+        <span class="title">Joint Organising Secretary</span><br>
+        <a target="_blank" href="https://www.facebook.com/adpatkar"><img src="{% static 'sngm/images/aditya.png' %}" alt="Aditya Patkar" width="80%"></a><br>
+        <span class="title">Aditya Patkar</span><br>
+        <span class="title">+91-7715020270</span>
+      </div>
+      <div class="col-md-4 member text-center">
+        <span class="title">Treasurer</span><br>
+        <a target="_blank" href="https://www.facebook.com/sambit.sarkar.391"><img src="{% static 'sngm/images/tarandeep.png' %}" alt="Tarandeep Singh" width="90%"></a><br>
+
+        <span class="title">Sambit Sarkar</span><br> 
+        <span class="title">+91-8755182329</span>
+      </div>
+        
+        
+      
+    </div>
+  </div>
+
+    </div>
+
+    
+    
+    
+    
+<!--
+<div class="section5 ng-scope">
+  <div class="">
+    <div class="container">
+      <div class="heading text-center" style="width: 100%">
+        <img src="{% static 'sngm/images/team-head.png' %}" width="30%">
+      </div>
+      <div class="container" style="width:73%;">
+      <div class="col-md-6 member text-center">
+        <span class="title">Chief Sports Adviser</span><br>
+        <img src="{% static 'sngm/images/Kansal sir.png' %}" alt="Sumit Kumar Yadav" width="90%"><br>
+        <span class="title">Dr. M.L.Kansal</span>
+      </div>
+      <div class="col-md-6 member text-center">
+        <span class="title">Faculty Incharge</span><br>
+        <img src="{% static 'sngm/images/avli maam.png' %}" alt="Aditya Patkar" width="69%"><br>
+        <span class="title">Dr. Avlokita Agrawal</span>
+      </div>
+    </div>
+
+      <div class="">
+        <div class="container" style="width:73%;">
+          <div class="col-md-6 member text-center">
+
+                    <span class="title">Head Admin &amp; Events</span><br>
+                    <a target="_blank" href="https://www.facebook.com/Pavitteg26bir"><img src="{% static 'sngm/images/pavit.png' %}" alt="Pavit Teg Bir Singh" width="90%"></a><br>
+                    <span class="title">Harsh Bansal</span><br>
+                    <span class="title">+91-7217259085</span>
+         </div>
+          <div class="col-md-6 member text-center">
+
+
+            <span class="title">Head Admin &amp; Events</span><br>
+            <a target="_blank" href="https://www.facebook.com/sachin.nehru"><img src="{% static 'sngm/images/sachin.png' %}" alt="Sachin Nehru" width="90%"></a><br>
+            <span class="title">Vardan Bapna (chutiya)</span><br>
+            <span class="title">+91-9760835380</span>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4 member text-center">
+
+        <span class="title">Head Sponsorship</span><br>
+        <a target="_blank" href="https://www.facebook.com/sumit.1828"><img src="{% static 'sngm/images/sumit.png' %}" alt="Sumit Kumar Yadav" width="90%"></a><br>
+        <span class="title">Rajneesh Lodhi</span><br>
+        <span class="title">+91-9557917623</span>
+      </div>
+      <div class="col-md-4 member text-center">
+        <span class="title">Head Sponsorship</span><br>
+        <a target="_blank" href="https://www.facebook.com/adpatkar"><img src="{% static 'sngm/images/aditya.png' %}" alt="Aditya Patkar" width="80%"></a><br>
+        <span class="title">Raunak Ravi</span><br>
+        <span class="title">+91-8287709351</span>
+      </div>
+      <div class="col-md-4 member text-center">
+        <span class="title">Head Sponsorship</span><br>
+        <a target="_blank" href="https://www.facebook.com/sambit.sarkar.391"><img src="{% static 'sngm/images/tarandeep.png' %}" alt="Tarandeep Singh" width="90%"></a><br>
+
+        <span class="title">Aby Jose</span><br> 
+        <span class="title">+91-8308456212</span>
+      </div>
+        
+        
+      <div class="col-md-4 member text-center">
+
+        <span class="title">Organising Secretary</span><br>
+        <a target="_blank" href="https://www.facebook.com/sumit.1828"><img src="{% static 'sngm/images/sumit.png' %}" alt="Sumit Kumar Yadav" width="90%"></a><br>
+        <span class="title">Sumit Kumar Yadav</span><br>
+        <span class="title">+91-8006478565</span>
+      </div>
+      <div class="col-md-4 member text-center">
+        <span class="title">Treasurer</span><br>
+        <a target="_blank" href="https://www.facebook.com/adpatkar"><img src="{% static 'sngm/images/aditya.png' %}" alt="Aditya Patkar" width="80%"></a><br>
+        <span class="title">Sambit Sarkar</span><br>
+        <span class="title">+91-8755182329</span>
+      </div>
+      <div class="col-md-4 member text-center">
+        <span class="title">Co-Treasurer</span><br>
+        <a target="_blank" href="https://www.facebook.com/sambit.sarkar.391"><img src="{% static 'sngm/images/tarandeep.png' %}" alt="Tarandeep Singh" width="90%"></a><br>
+
+        <span class="title">Vipul Seth</span><br> 
+        <span class="title">+91-9413408986</span>
+      </div>
+    </div>
+  </div>
+
+    </div>
+-->
+
+    <div class="section7 ng-scope" id="contact">
+      <div class="">
+        <div class="container">
+          <div class="heading text-center" style="width: 100%; margin-bottom: 70px;">
+            <img src="{% static 'sngm/images/contact-head.png' %}" width="30%">
+          </div>
+        </div>
+      </div>
+      <div id="map" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: 264px; top: 94px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 520px; top: 94px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 520px; top: -162px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 264px; top: -162px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 264px; top: 350px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 520px; top: 350px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 8px; top: 94px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 776px; top: 94px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 8px; top: 350px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 776px; top: -162px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 776px; top: 350px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 8px; top: -162px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 1032px; top: 94px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -248px; top: 94px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -248px; top: 350px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 1032px; top: -162px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -248px; top: -162px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 1032px; top: 350px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 264px; top: 94px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 520px; top: 94px;"><canvas draggable="false" height="256" width="256" style="user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 520px; top: -162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 264px; top: -162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 264px; top: 350px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 520px; top: 350px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 8px; top: 94px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 776px; top: 94px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 8px; top: 350px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 776px; top: -162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 776px; top: 350px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 8px; top: -162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1032px; top: 94px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -248px; top: 94px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -248px; top: 350px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1032px; top: -162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -248px; top: -162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1032px; top: 350px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: 264px; top: 94px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 520px; top: 94px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(1)' %}"draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 520px; top: -162px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(2)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 264px; top: -162px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(3)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 264px; top: 350px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(4)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 8px; top: 94px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(5)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 8px; top: 350px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(6)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 776px; top: -162px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(7)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 776px; top: 350px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(8)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 8px; top: -162px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(9)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 1032px; top: 94px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(10)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -248px; top: 350px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(11)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 1032px; top: 350px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(12)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 776px; top: 94px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(13)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -248px; top: 94px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(14)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 1032px; top: -162px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(15)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -248px; top: -162px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(16)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 520px; top: 350px; transition: opacity 200ms ease-out;"><img src="{% static 'sngm/images/vt(17)' %}" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div><iframe style="visibility: hidden; z-index: 0; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;" src="./sangramiitr.in_files/saved_resource.html"></iframe></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=29.863202,78.334332&amp;z=4&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="{% static 'sngm/images/google4.png' %}" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 493px; top: 160px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2017 Google, ORION-ME, SK telecom, ZENRIN</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="{% static 'sngm/images/mapcnt6.png' %}" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 71px; bottom: 0px; width: 267px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2017 Google, ORION-ME, SK telecom, ZENRIN</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2017 Google, ORION-ME, SK telecom, ZENRIN</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="{% static 'sngm/images/sv9.png' %}" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; display: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@29.863202,78.3343321,4z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="Zoom in" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="{% static 'sngm/images/tmapctrl.png' %}" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="Zoom out" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="{% static 'sngm/images/tmapctrl.png' %}" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="{% static 'sngm/images/cb_scout5.png' %}" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Pegman is on top of the Map" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="{% static 'sngm/images/cb_scout5.png' %}" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="{% static 'sngm/images/cb_scout5.png' %}" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="{% static 'sngm/images/tmapctrl4.png' %}" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="{% static 'sngm/images/tmapctrl4.png' %}" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show street map" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 22px; font-weight: 500;">Map</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="{% static 'sngm/images/imgs8.png' %}" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show satellite imagery" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left: 0px; min-width: 40px;">Satellite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="{% static 'sngm/images/imgs8.png' %}" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div></div></div>
+      <div class="contact-details">
+        <img src="{% static 'sngm/images/contact.png' %}"  width="120%" height="145%" style="margin-left:-10%;margin-top:-12%">
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/sangramiitr.in/" target="_BLANK"><i><img src="http://allwebco-templates.com/support/scripts/social-icons/social-facebook-30x30.png" style="padding:8px;"></i></a>
+        <a href="https://www.youtube.com/channel/UCuJ4t3MjYJh5hipFkYlHI_w" target="_BLANK"><i><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/607/YouTube_Play.png" style="width:50px;"></i></a>
+        <a href="https://plus.google.com/113203810761850197300" target="_BLANK"><i><img src="https://images.seeklogo.net/2015/09/google-plus-new-icon-logo.png" style="width:70px;"></i></a>
+        <a href="https://www.instagram.com/explore/locations/1032655554/sangram-iit-roorkee/" target="_BLANK"><i ><img src="https://img.clipartfest.com/97a520ae23396b2d61b02fe94eef1201_do-not-abuse-hashtags-instagram-circle-clipart_512-512.png" style="width:50px"></i></a>
+      </div>
+      <div class="text-center" style="margin-top: 10px;">
+        <span class="rights">All Rights Reserved Sangram IIT Roorkee</span>
+      </div>
+    </div>
+
+    <div id="register" class="modal fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">Register Your College</h4>
+          </div>
+        <!-- <div class="modal-body">
+            <form class="form-horizontal ng-pristine ng-valid ng-valid-email" ng-submit="initialReg()" ng-hide="done">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="name" ng-model="leader.name" placeholder="Full Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-email" id="email" ng-model="leader.email" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">College</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="college" ng-model="leader.college" placeholder="Full College Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Contact</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="contact" ng-model="leader.number" placeholder="Contact No.">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-info btn-block" style="background-color: #077b7a; border: none;">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+            <div ng-hide="!done" class="ng-hide">
+              <p class="text-center ng-binding"></p><p>
+            </p></div>
+
+          </div>-->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+<div>
+    <script class="ng-scope">
+    function initMap() {
+      var uluru = {lat: 29.863202, lng: 77.894879};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqfpQExLmvKG8D1PzXEQm48wOktB8d6wI&callback=initMap">
+  </script>
+    </div>
+
+    <script src="{% static 'sngm/js/jquery.min.js' %}"></script>
+    <script src="{% static 'sngm/js/bootstrap.min.js' %}" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{% static 'sngm/js/select2.min.js' %}"></script>
+    <script src="{% static 'sngm/js/loading-bar.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{% static 'sngm/js/login_effect.js' %}"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="{% static 'sngm/js/app.js' %}"></script>
+    <script src="{% static 'sngm/js/main.js' %}"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="{% static 'sngm/clock/js/kinetic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sngm/clock/js/jquery.final-countdown.js' %}"></script>
+    <script type="text/javascript">
+        $('document').ready(function() {
+            'use strict';
+
+            var s = new Date(118, 1, 1, 0, 0, 1, 0);
+            var n = new Date();
+            var e = new Date(118, 2, 29, 0, 0, 1, 0);
+            var timeDiff = Math.abs(n.getTime() - n.getTime());
+          $('.countdown').final_countdown({
+//                /*'start': 1362139200,*/
+//                'end': timeDiff/1000,
+//                'now': 0
+//              
+            'start': s.getTime(),
+            'end': e.getTime(),
+            'now': n.getTime()  
+            });
+        });
+    </script>
+
+        <!-- bower components -->
+      <!-- <script src='/static/bower_components/underscore/underscore-min.js'></script> -->
+        <!--<script src="{% static 'sngm/js/angular.min.js' %}"></script>-->
+
+        <!-- <script src='/static/bower_components/angular-underscore-module/angular-underscore-module.js'></script> -->
+        <!--<script src="{% static 'sngm/js/angular-route.min.js' %}"></script>-->
+        <!-- <script src="//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script> -->
+        <!-- <script src='/static/bower_components/angular-animate/angular-animate.min.js'></script> -->
+        <!-- <script src='/static/bower_components/AngularJS-Toaster/toaster.min.js'></script> -->
+        <!-- <script src='/static/bower_components/angular-route/angular-route.min.js'></script> -->
+        <!-- <script src='/static/bower_components/angular-smart-table/dist/smart-table.min.js'></script> -->
+        <!-- <script src='/static/bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js'></script> -->
+        <!-- <script src='/static/bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js'></script>
+        <script src='/static/bower_components/angular-ckeditor/angular-ckeditor.min.js'></script>
+        <script src='/static/bower_components/ng-file-upload/ng-file-upload.min.js'></script> -->
+        <!-- <script src='/static/bower_components/pdfmake/build/pdfmake.min.js'></script> -->
+        <!-- <script src="https://rawgithub.com/bpampuch/pdfmake/master/build/vfs_fonts.js"></script> -->
+        <!-- end -->
+        <!-- <script src='/static/scripts/main.directives.js'></script> -->
+        <!-- <script src='/static/scripts/app.js'></script> -->
+
+    </body></html>
