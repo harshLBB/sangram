@@ -602,16 +602,24 @@ If you want to run, run a mile. If you want to experience a different life, run 
     <script type="text/javascript">
         $('document').ready(function() {
             'use strict';
-
-            var s = new Date(118, 1, 1, 0, 0, 1, 0);
+            
+              var s = new Date("4/01/2018");
             var n = new Date();
-            var e = new Date(118, 2, 29, 0, 0, 1, 0);
             var timeDiff = Math.abs(n.getTime() - n.getTime());
           $('.countdown').final_countdown({
-//                /*'start': 1362139200,*/
-//                'end': timeDiff/1000,
-//                'now': 0
-//              
+                /*'start': 1362139200,*/
+                'end': timeDiff/1000,
+                'now': 0
+
+//            var s = new Date(118, 1, 1, 0, 0, 1, 0);
+//            var n = new Date();
+//            var e = new Date(118, 2, 29, 0, 0, 1, 0);
+//            var timeDiff = Math.abs(n.getTime() - n.getTime());
+//          $('.countdown').final_countdown({
+////                /*'start': 1362139200,*/
+////                'end': timeDiff/1000,
+////                'now': 0
+////              
             'start': s.getTime(),
             'end': e.getTime(),
             'now': n.getTime()  
